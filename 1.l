@@ -7,6 +7,12 @@
 
 int main()
 {
+	yyin = fopen("file.txt", "r");
 	yylex();
 	return 0;
+}
+
+int yywrap(void)
+{
+	return 1;
 }
