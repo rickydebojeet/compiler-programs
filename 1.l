@@ -13,7 +13,7 @@
 /* Copy a line to the output file */
 /* Replace sequence of white space by a single blank */
 /* Copy everything else as it is to the line*/
-/*Copy a line to the output file at the end*/ 
+/*Copy a line to the output file at the end*/
 %%
 [\n]		{fprintf(yyout, "%s\n", string); string[0] = '\0'; }
 [ ]*		{fprintf(yyout, "%s", string); string[0] = '\0'; fprintf(yyout, "%s", " "); }
