@@ -12,8 +12,8 @@ bit [0-1]
 /* Ignore everything else */
 %%
 {bit}{bit}{bit}{bit}{bit}{bit}{bit}{bit}		printf("%s is a 8-bit Binary number\n", yytext);
-{bit}+ printf("%s is not a 8-bit Binary number\n", yytext);
-.|\n;  	
+{bit}+ 											printf("%s is not a 8-bit Binary number\n", yytext);
+.|\n  											;  	
 %%
 int main()
 {
