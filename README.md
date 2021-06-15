@@ -41,8 +41,9 @@ Please make sure to update tests as appropriate.
 
 ## :+1: Credits
 
-- [Swaubhik Chakraborty](https://www.swaubhik.engineer/)
 - [Debojeet Das](https://www.debojeet.works)
+- [Swaubhik Chakraborty](https://www.swaubhik.engineer/)
+
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
