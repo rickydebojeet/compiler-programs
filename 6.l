@@ -1,3 +1,4 @@
+/* Lex program to count the number of lines in a given input source file. */
 %{
 	/* standard io for io functions and stdlib for exit()*/
 	#include <stdio.h>
@@ -7,9 +8,8 @@
 %}
 
 /* Rules */
-/* Count vowels */
-/* Count consonants */
 /* Ignore everything else */
+/* Count lines */
 %%
 .			;
 \n 			count++;

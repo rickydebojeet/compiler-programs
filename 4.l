@@ -1,3 +1,4 @@
+/* Lex program which will identify identifier from given file */
 /* Definition Section */
 digit [0-9]
 letter [A-Za-z]
@@ -8,21 +9,14 @@ letter [A-Za-z]
 
 
 /* Rule Section */
-/* Check the token, if token is match with pattern then it will print identifier. */
+/* Check the identifier */
+/* Ignore everything else */
 %%
-
 {letter}({letter}|{digit}|_)*		printf("Identifier is %s\n", yytext);
 .|\n 								;
 %%
 
-/*call the yywrap function*/
-int yywrap()					
-{
-	return 1;
-}
 
-/*Auxiliary function*/
-/*Driver function*/
 int main()
 {
 	extern FILE *yyin;
@@ -38,4 +32,10 @@ int main()
 	/*call the yylex function.*/
 	yylex();						
 	return 0;
+}
+
+/*call the yywrap function*/
+int yywrap()					
+{
+	return 1;
 }
