@@ -1,4 +1,4 @@
-//C program to implement the transition diagram for integer
+//C program to implement the transition diagram for real number
 
 
 #include <stdio.h>
