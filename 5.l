@@ -13,7 +13,7 @@ vowel [aeiouAEIOU]
 /* Rules */
 /* Count vowels */
 /* Count consonants */
-/* Ignore everything else */ 
+/* Ignore everything else */
 %%
 {vowel}		vcounter++;
 {consonant}	ccounter++;
