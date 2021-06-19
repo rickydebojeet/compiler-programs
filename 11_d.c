@@ -59,7 +59,7 @@ int main()
     printf("Input:\t");
     scanf("%s", str);
     if (isAccepted(str))
-        printf("Real number\n");
+        printf("Identifier\n");
     else
         printf("Error\n");
     return 0;
