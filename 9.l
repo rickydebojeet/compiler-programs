@@ -1,4 +1,4 @@
-/* lex program to find out all the tokens from the following input C program. */
+/* lex program to find out all the tokens input C program. */
 /* Definition Section */
 digit [0-9]
 letter [a-zA-Z]
