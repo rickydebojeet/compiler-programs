@@ -8,8 +8,11 @@ int dfa = 0;
   
 void start(char c)
 {
-    if (c == '0'|| c == '1' || c == '2' || c == '3' || c == '4'|| c == '5'|| c == '6' || c == '7' || c == '8' || c == '9' || c == '+' || c == '-') {
+    if (c == '+' || c == '-') {
         dfa = 1;
+    }
+    if (c == '0'|| c == '1' || c == '2' || c == '3' || c == '4'|| c == '5'|| c == '6' || c == '7' || c == '8' || c == '9') {
+        dfa = 2;
     }
     // -1 is used to check for any invalid symbol
     else {
@@ -17,11 +20,22 @@ void start(char c)
     }
 }
   
-// This function is for the first state (Q1) of DFA
+// This function is for the second state (Q2) of DFA
+void state2(char c)
+{
+    if (c == '0'|| c == '1' || c == '2' || c == '3' || c == '4'|| c == '5'|| c == '6' || c == '7' || c == '8' || c == '9') {
+        dfa = 2;
+    }
+    // -1 is used to check for any invalid symbol
+    else {
+        dfa = -1;
+    }
+}
+
 void state1(char c)
 {
     if (c == '0'|| c == '1' || c == '2' || c == '3' || c == '4'|| c == '5'|| c == '6' || c == '7' || c == '8' || c == '9') {
-        dfa = 1;
+        dfa = 2;
     }
     // -1 is used to check for any invalid symbol
     else {
@@ -40,6 +54,9 @@ int isAccepted(char str[])
             start(str[i]);
         else if (dfa == 1) {
             state1(str[i]);
+        }
+        else if (dfa == 2) {
+            state2(str[i]);
             return 1;
         }
         else {
@@ -47,6 +64,13 @@ int isAccepted(char str[])
         }
 
     }
+    if (dfa == 2)
+    {
+        return 1;
+    }
+    else
+        return 0;
+    
 }
   
 // driver code
