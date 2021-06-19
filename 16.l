@@ -1,39 +1,36 @@
-/*lex program to implement
-		- a simple calculator.*/
-
+/* Lex program to implement a simple calculator. */
+/* Definition Section */
 %{
-/* standard io for io functions, string.h for string functions and stdlib for exit()*/
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
+    /* Standard io for io functions, string.h for string functions and stdlib for exit()*/
+    #include <stdio.h>
+    #include <string.h>
+    #include <stdlib.h>
     /* String variable to store string line by line*/
     int op = 0, i;
     float a, b;
+    void calculate();
 %}
-dig [0-9]+|([0-9]*)"."([0-9]+)
-add "+"
-sub "-"
-mul "*"
-div "/"
-pow "^"
-ln \n
+digits [0-9]+|([0-9]*)"."([0-9]+)
+addition "+"
+subtraction "-"
+multiplication "*"
+division "/"
+power "^"
+endofline \n
 
-
-
-/* digi() is a user defined function */
+/* Rule Section */
 %%
-  
+{digits} {calculate();} 
+{addition} {op=1;}
+{subtraction} {op=2;}
+{multiplication} {op=3;}
+{division} {op=4;}
+{power} {op=5;}
+{endofline} {printf("Answer :%f\n\n",a);}
 
-{dig} {digi();} 
-{add} {op=1;}
-{sub} {op=2;}
-{mul} {op=3;}
-{div} {op=4;}
-{pow} {op=5;}
-{ln} {printf("\n The Answer :%f\n\n",a);}
-  
+
 %%
-    digi()
+void calculate()
 {
     if (op == 0)
 
@@ -71,12 +68,13 @@ ln \n
     }
 }
 
-main(int argv, char *argc[])
+int main()
 {
     yylex();
+    return 0;
 }
 
-yywrap()
+int yywrap()
 {
     return 1;
 }
