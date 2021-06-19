@@ -1,6 +1,6 @@
-/* Lex program to count the number of vowels and consonants from an input file and write the results to a file. */
+/* Lex program to count the number "The" in a input text */
 /* Definations */
-the [the|The]
+the ("the"|"The"|"THE")
 %{
 	/* standard io for io functions and stdlib for exit()*/
 	#include <stdio.h>
@@ -24,7 +24,7 @@ int main()
 	printf("This Program  counts the number of \"the\" present in the input text\nEnter the text\t");
 	/*call the yylex function.*/
 	yylex();
-    printf("\nNumber of the: %d\n", count);						
+    printf("\nNumber of the: %d\n", count);					
 	return 0;
 }
 
