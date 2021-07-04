@@ -1,5 +1,5 @@
-/* Lex program to count the number of palindromes present in a input text and write them to a separate text file */
-
+/* Lex program to count the number of palindromes present in a input text */
+/* and write them to a separate text file */
 %{
     #include<stdio.h> 
     #include <stdlib.h>
@@ -18,7 +18,10 @@
 		  break;
 	}
 	if(i==len)
-	  counter++;
+	{
+		counter++;
+		fprintf(yyout, "%s\n", yytext);
+	}
 };
 . ;
 \n ;
@@ -26,16 +29,9 @@
   
 int main()
 {
-	extern FILE *yyin, *yyout;
+	extern FILE *yyout;
 	char filename[100]; 
-	printf("This Program program counts the number of palindromes from an input file and shows the output\nEnter the name of the file to read:\t");
-	scanf("%s", filename);
-	/* Opening file to read */
-	yyin = fopen(filename, "r");
-	if (yyin == NULL){
-		printf("Cannot open file %s\n", filename);
-	    exit(0);
-	}
+	printf("This Program program counts the number of palindromes from an input file and puts the palindrome in a text file\n");
 	printf("Enter the name of the file to open for writing:\t");
 	scanf("%s", filename);
 	/* Opening file to write */
@@ -46,8 +42,11 @@ int main()
 	}
 	yylex();
 	fprintf(yyout, "Palindromes: %d\n", counter);
+	printf("Palindromes: %d\n", counter);
 	return 0;
 }
+
+
 
 int yywrap(void)
 {
