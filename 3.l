@@ -1,6 +1,6 @@
-/* Lex program which will modify the words in the following way:
-If the first letter is a consonant, move it to the end of the word and then add ay.
-If the first letter is a vowel, just add ay to the end of the word. */
+/* Lex program which will modify the words in the following way: */
+/* If the first letter is a consonant, move it to the end of the word and then add ay. */
+/* If the first letter is a vowel, just add ay to the end of the word. */
 /* Definations */
 consonant [b-df-hj-np-tv-zB-DF-HJ-NP-TV-Z]
 vowel [aeiouAEIOU]
