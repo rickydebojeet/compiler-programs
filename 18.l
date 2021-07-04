@@ -9,7 +9,7 @@
 %%
 
 [0-9 a-z A-z]+ {id++;printf("\n Identifier:\t");ECHO;}
-[+ | - | / | = | *] {op++; printf("\n Operator:\t");ECHO;}
+[+ | \-\ | / | = | *] {op++; printf("\n Operator:\t");ECHO;}
 "(" {v++;}
 ")" {v--;}
 ";" {flag = 1;}
@@ -22,7 +22,7 @@ int main()
     yylex();
     if((op+1) == id && v==0 && flag==0){
         printf("\nThe given Expression is valid\n");
-        printf("\nThe bo. of Identifiers are %d\n",id);
+        printf("\nThe no. of Identifiers are %d\n",id);
         printf("\nThe no. of operators are %d\n",op);
     }
     else{
