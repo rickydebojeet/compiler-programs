@@ -28,7 +28,7 @@ int main()
 {
 	extern FILE *yyin, *yyout;
 	char filename[100]; 
-	printf("This Program program counts the number of palindromes from an input file and and  shows the output\nEnter the name of the file to read:\t");
+	printf("This Program program counts the number of palindromes from an input file and shows the output\nEnter the name of the file to read:\t");
 	scanf("%s", filename);
 	/* Opening file to read */
 	yyin = fopen(filename, "r");
