@@ -1,4 +1,4 @@
-/* Lex Program that Checks a vild arithmentc expression */
+/* Lex Program that Checks a vaild arithmentc expression */
 /* Definations */
 %{
     /* standard io for io functions*/
@@ -8,7 +8,7 @@
 /* Rules */
 %%
 
-[a-zA-Z]+[0-9a-zA-z]* {id++;printf("\n Identifier:\t");ECHO;}
+[0-9 a-z A-z]+ {id++;printf("\n Identifier:\t");ECHO;}
 [+ | - | / | = | *] {op++; printf("\n Operator:\t");ECHO;}
 "(" {v++;}
 ")" {v--;}
