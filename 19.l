@@ -1,13 +1,14 @@
 /*lex program to find the length of a string*/
 %{
-  #include<stdio.h> 
+  #include <stdio.h> 
   int  length;
 %}
 /* Rule Section */
-/* Check the stopwords */
+/* Find length of a string */
 /* Ignore everything else */
 %%
-[a-z A-Z 0-9]+ {length=yyleng; }
+.+ {length=yyleng; }
+\n  ;
 %%
   
 int main()
