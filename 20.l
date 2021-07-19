@@ -4,9 +4,6 @@
 	/* standard io for io functions and strigs.h for strings*/
 	#include <stdio.h>
 	#include <string.h> 
-	/* Counter variables */
-	int small=9999, len;
-	char string[200], word[200];
 %}
 
 /* Rules */
