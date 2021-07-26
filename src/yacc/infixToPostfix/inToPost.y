@@ -5,22 +5,32 @@
    #include <stdlib.h>
 %}
 
+/* yacc definations */
 %union {int number;}
-%start E
-%token <number> num 
-%type <number> F T E
+%start lines
+%token <number> num
+%token newline
+%token exit_command
 
+/* Grammar definations with actions */
 %%
-E:      E '+' T         {printf("+");}
-    |   T               {;}
+lines:  
+    |   lines E newline     {;}
+    |   lines exit_command  {exit(EXIT_SUCCESS);}
     ;
-T:      T '*' F         {printf("*");}
-    |   F               {;}
+E:      E '+' T             {printf("+");}
+    |   E '-' T             {printf("-");}
+    |   T                   {;}
     ;
-F:      num             {printf("%d", $1);}
+T:      T '*' F             {printf("*");}
+    |   T '/' F             {printf("/");}
+    |   F                   {;}
+    ;
+F:      num                 {printf("%d", $1);}
     ;
 %%
 
+/* main function */
 int main() {
 	return yyparse();
     return 0;
