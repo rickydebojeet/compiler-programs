@@ -5,10 +5,18 @@
    #include <stdlib.h>
 %}
 
-%start S
+/* yacc definations */
+%start lines
+%token newline
+%token exit_command
 
+/* Grammar Rules with Actions */
 %%
-S:      A B                     {printf("The string is detected\n");}
+lines:
+    |   lines S newline         {;}
+    |   lines exit_command      {exit(EXIT_SUCCESS);}
+    ;
+S:      A B                     {printf("The string is detected\n>> ");}
     ;
 A:      A 'a'                   {;}
     |   'a' 'a' 'a' 'a' 'a'     {;}
@@ -17,9 +25,12 @@ B:      'b' 'b'                 {;}
     ;
 %%
 
+/* main function */
 int main() {
+    printf("String Chechker built using YACC and LEX\n");
+    printf("Reserved keywords: exit, quit\n");
+    printf(">> ");
 	return yyparse();
-    return 0;
 }
 
 void yyerror(char *s) {
