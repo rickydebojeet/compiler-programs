@@ -1,4 +1,4 @@
-/* yacc program for recognition of string */
+/* yacc program for conversion of infix to prefix */
 %{
    void yyerror(char *);
    #include <stdio.h>
@@ -7,6 +7,7 @@
    char* concat( const char*, const char*, const char*);
 %}
 
+/* yacc definitions */
 %union {char* exp;}
 %start lines
 %token <exp> integer 
@@ -19,9 +20,10 @@
 %left opr2
 %type <exp> expe expt expf lines
 
+/* Grammar Definitions with actions */
 %%
 lines:  
-    |   lines expe newline      {printf("%s\n", $2);}
+    |   lines expe newline      {printf("%s\n>> ", $2);}
     ;
 expe:   expe opr1 expt          {$$ = concat($2, $1, $3);}
     |   expt                    {$$ = $1;}
@@ -36,6 +38,7 @@ expf:   '(' expe ')'            {$$ = $2;}
     ;
 %%
 
+/* main function */
 int main() {
     printf("Infix to Prefix Converter built using YACC and LEX\n");
     printf("Reserved keywords: exit, quit\n");
@@ -48,6 +51,7 @@ void yyerror(char *s) {
     exit(1);
 }
 
+/* This function concatanates three string and returns it */
 char* concat( const char* s1, const char* s2, const char* s3)
 {
     int len = strlen(s1) + strlen(s2) + strlen(s3) + 1;
