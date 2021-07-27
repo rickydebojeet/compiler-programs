@@ -1,0 +1,21 @@
+# Ignore Mac system files
+.DS_store
+
+# Ignore node_modules folder
+node_modules
+
+# Ignore all text files
+*.txt
+
+# Ignore files related to API keys
+.env
+
+# Ignore gcc config files
+.out
+
+# Ignore lex files
+lex.yy.c
+
+# Ignore all yacc files
+y.yab.c
+y.tab.h
