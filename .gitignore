@@ -17,5 +17,5 @@ node_modules
 lex.yy.c
 
 # Ignore all yacc files
-y.yab.c
+y.tab.c
 y.tab.h
