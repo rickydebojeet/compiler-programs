@@ -10,8 +10,9 @@ node_modules
 # Ignore files related to API keys
 .env
 
-# Ignore gcc config files
+# Ignore output files
 .out
+a.out
 
 # Ignore lex files
 lex.yy.c
