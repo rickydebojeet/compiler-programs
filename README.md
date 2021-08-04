@@ -77,6 +77,16 @@ A finite automata is implemented using C programming language which can detect:
 - [Lex program to sort all the words in an input text as per their length.](./src/lex/23.l )
 
 ### 3. Yacc Programs
+- [YACC program to recognize strings of { anbb | n≥5 }.](./src/yacc/string)
+- [YACC program for Binary to Decimal Conversion.](./src/yacc/binaryToDecimal)
+- [YACC program to recognize string with grammar { bnan | n≥0 }.](./src/yacc/contextFreeGrammar)
+- [Yacc Program to evaluate a given arithmetic expression.](./src/yacc/evaluation)
+- [YACC program to check whether given string is Palindrome or not.](./src/yacc/palindrome)
+- [YACC program for Conversion of Infix to Postfix expression.](./src/yacc/infixToPostfix)
+- [YACC program for Conversion of Infix to Prefix expression.](./src/yacc/infixToPrefix)
+- [YACC program which accept strings that starts with 0 and ends with 1.](./src/yacc/startAndEndString)
+- [YACC program to implement a Calculator and recognize a valid Arithmetic expression.](./src/yacc/calculator)
+- [YACC program to recognize a valid variable, which starts with a letter, followed by any number of letters or digits.](./src/yacc/variableDetector)
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
