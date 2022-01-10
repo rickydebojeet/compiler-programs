@@ -101,7 +101,7 @@ Please make sure to update tests as appropriate.
 
 ## :+1: Credits
 
-- [Debojeet Das](https://www.debojeet.works)
+- [Debojeet Das](https://rickydebojeet.github.io)
 - [Swaubhik Chakraborty](https://www.swaubhik.engineer/)
 
 
