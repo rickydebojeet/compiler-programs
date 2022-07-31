@@ -20,4 +20,4 @@ lex.yy.c
 # Ignore all yacc files
 y.tab.c
 y.tab.h
-yarn.lock
+
