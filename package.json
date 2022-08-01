@@ -1,0 +1,18 @@
+{
+  "name": "compiler-programs",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/swaubhik/compiler-programs.git",
+  "author": "Swaubhik Chakraborty <b18csel299@cit.ac.in>",
+  "license": "MIT",
+  "description": "Website for Compiler design and implementation",
+  "scripts": {
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:serve": "vitepress serve docs"
+  },
+  "devDependencies": {
+    "vitepress": "^1.0.0-alpha.4",
+    "vue": "^3.2.37"
+  }
+}
