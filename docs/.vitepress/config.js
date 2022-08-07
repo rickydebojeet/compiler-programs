@@ -7,30 +7,13 @@ export default {
   lastUpdated: true,
   markdown: {
     theme: "material-palenight",
-    // lineNumbers: true,
+    lineNumbers: true,
   },
   themeConfig: {
     logo: "/logo.svg",
-    nav: [
-      { text: "Guide", link: "/guide" },
-      {
-        text: "Dropdown Menu",
-        items: [
-          { text: "Item A", link: "/item-1" },
-          { text: "Item B", link: "/item-2" },
-          { text: "Item C", link: "/item-3" },
-        ],
-      },
-    ],
-    sidebar: [
-      {
-        text: "Guide",
-        items: [
-          { text: "Introduction", link: "/introduction" },
-          { text: "Getting Started", link: "/getting-started" },
-        ],
-      },
-    ],
+    sidebar: {
+      "/guide/": sidebarGuide(),
+    },
     socialLinks: [
       { icon: "github", link: "https://github.com/swaubhik/compiler-programs" },
       { icon: "twitter", link: "https://twitter.com/SwaubhikC" },
@@ -46,3 +29,21 @@ export default {
     },
   },
 };
+function sidebarGuide() {
+  return [
+    {
+      text: "Introduction",
+      collapsible: true,
+      items: [{ text: "Getting Started", link: "/guide/getting-started" }],
+    },
+    {
+      text: "Contents",
+      collapsible: true,
+      items: [
+        { text: "C", link: "/guide/c" },
+        { text: "Lex", link: "/guide/lex" },
+        { text: "Yacc", link: "/guide/yacc" },
+      ],
+    },
+  ];
+}
