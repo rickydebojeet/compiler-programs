@@ -1,1 +1,0 @@
-import{_ as e,c as t,o as a,a as o}from"./app.c2fc7620.js";const x=JSON.parse('{"title":"Lex Programs","description":"","frontmatter":{},"headers":[],"relativePath":"guide/lex.md","lastUpdated":1659897369000}'),r={name:"guide/lex.md"},l=o("",2),i=[l];function n(p,d,h,c,f,s){return a(),t("div",null,i)}var u=e(r,[["render",n]]);export{x as __pageData,u as default};
