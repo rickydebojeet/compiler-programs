@@ -1,14 +1,8 @@
 # Ignore Mac system files
 .DS_store
 
-# Ignore node_modules folder
-node_modules
-
 # Ignore all text files
 *.txt
-
-# Ignore files related to API keys
-.env
 
 # Ignore output files
 out
@@ -20,5 +14,3 @@ lex.yy.c
 # Ignore all yacc files
 y.tab.c
 y.tab.h
-
-/docs/.vitepress/dist/

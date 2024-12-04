@@ -1,9 +1,6 @@
-[![Deploy](https://github.com/swaubhik/compiler-programs/actions/workflows/deploy.yml/badge.svg)](https://github.com/swaubhik/compiler-programs/actions/workflows/deploy.yml)
 # compiler-programs
 
-**This Repository contains C, LEX and YACC files made during our couse of Compiler Design (CS601).** 
-
-## Documentation site at : [Compiler Design](https://swaubhik.github.io/compiler-programs/)
+**This Repository contains C, LEX and YACC files made during our couse of Compiler Design (CS601).**
 
 ## Pre-Requisites
 
